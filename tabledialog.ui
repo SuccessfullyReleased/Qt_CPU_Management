@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TableDialog</class>
+ <widget class="QWidget" name="TableDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>576</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>表格计算</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>120</y>
+     <width>1024</width>
+     <height>360</height>
+    </rect>
+   </property>
+   <property name="rowCount">
+    <number>1</number>
+   </property>
+   <property name="columnCount">
+    <number>7</number>
+   </property>
+   <row/>
+   <column>
+    <property name="text">
+     <string>作业名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>进入时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>执行时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>开始时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>结束时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周转时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>带权周转时间</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>500</y>
+     <width>235</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="hLayoutButton">
+    <item>
+     <widget class="QPushButton" name="calculateButton">
+      <property name="text">
+       <string>计算</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="ReturnButton">
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QCheckBox" name="editCheck">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>500</y>
+     <width>105</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>编辑</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>40</y>
+     <width>821</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="hLayout">
+    <item>
+     <widget class="QLabel" name="sworkNum">
+      <property name="text">
+       <string>作业数量:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="workNum">
+      <property name="text">
+       <string>work number</string>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="salgorithm">
+      <property name="text">
+       <string>调度算法:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="algorithm">
+      <property name="text">
+       <string>algorithm</string>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignVCenter">
+     <widget class="QLabel" name="saverage1">
+      <property name="text">
+       <string>平均周转时间:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="average1">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="saverage2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>平均带权周转时间:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="average2">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>editCheck</tabstop>
+  <tabstop>calculateButton</tabstop>
+  <tabstop>ReturnButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ReturnButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TableDialog</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>495</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
